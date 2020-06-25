@@ -32,4 +32,10 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+
+    public void GiveMore(int battery)
+    {
+        currentHealth += battery;
+        healthBar.SetHealth(currentHealth);
+    }
 }
