@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f93b9840756f8401c8e87e05a1c8c97a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cocogoose Classic Trial
+  fontNames:
+  - Cocogoose Classic Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 047de392d8ed34506998a80a093301ac, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

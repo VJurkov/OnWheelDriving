@@ -7,12 +7,17 @@ public class Player : MonoBehaviour
 {
     public int maxHealth = 30;
     public int currentHealth;
+    public bool demoMode;
 
     public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (demoMode)
+        {
+            return;
+        }
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -20,6 +25,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (demoMode)
+        {
+            transform.Rotate(0, 20 * Time.deltaTime, 0);
+            return;
+        }
         // kad pokrenemo igru i svaki put kad udarimo po space na tipkovnici uzet ce 20 kao damage
         if(Input.GetKeyDown(KeyCode.Space))
         {
