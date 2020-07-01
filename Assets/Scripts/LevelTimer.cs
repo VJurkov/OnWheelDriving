@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class LevelTimer : MonoBehaviour
 {
     private float currentTime = 0f;
-    private float startingTime = 10f;
+    private float startingTime = 100f;
+
+    public bool isPaused = true;
 
     [SerializeField] Text countdownText;
 
@@ -17,6 +19,10 @@ public class LevelTimer : MonoBehaviour
 
     void Update()
     {
+        if(isPaused)
+        {
+            return;
+        }
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
 
