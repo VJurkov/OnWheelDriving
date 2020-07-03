@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 30;
-    public int currentHealth;
+    public float maxHealth = 10f;
+    public float currentHealth;
     public bool demoMode;
 
     public HealthBar healthBar;
+    public LoseTrigger trigger;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,9 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        currentHealth = maxHealth;
+        currentHealth = maxHealth / 2;
         healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
     }
 
     // Update is called once per frame
@@ -37,13 +39,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void TakeDamge(int damage)
+    public void TakeDamge(float damage)
     {
+        Debug.Log(damage);
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0f;
+            trigger.ShowLose();
+        }
     }
 
-    public void GiveMore(int battery)
+    public void GiveMore(float battery)
     {
         currentHealth += battery;
         healthBar.SetHealth(currentHealth);

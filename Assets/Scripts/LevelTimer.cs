@@ -10,6 +10,10 @@ public class LevelTimer : MonoBehaviour
 
     public bool isPaused = true;
 
+    public Player player;
+
+    public LoseTrigger trigger;
+
     [SerializeField] Text countdownText;
 
     void Start()
@@ -25,8 +29,8 @@ public class LevelTimer : MonoBehaviour
         }
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
-
-        if(currentTime < 5)
+        player.TakeDamge(0.05f * Time.deltaTime);
+        if (currentTime < 5)
         {
             countdownText.color = Color.red;
         }
@@ -34,6 +38,9 @@ public class LevelTimer : MonoBehaviour
         if(currentTime <=0)
         {
             currentTime = 0;
+            isPaused = true;
+            Time.timeScale = 0f;
+            trigger.ShowLose();
         }
     }
 }
