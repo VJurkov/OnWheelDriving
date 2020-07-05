@@ -601,6 +601,8 @@ GameObject:
   - component: {fileID: 5331329353960796139}
   - component: {fileID: 5331329353957928917}
   - component: {fileID: 5331329353959025941}
+  - component: {fileID: 2462362898018177833}
+  - component: {fileID: 6369100284318074531}
   m_Layer: 0
   m_Name: Classic_16_Roof
   m_TagString: Untagged
@@ -670,6 +672,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2462362898018177833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331329353961026507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.999995, y: 1.9817526, z: 0.16619629}
+  m_Center: {x: -0.0011123393, y: 0.5773461, z: 1.5395769}
+--- !u!114 &6369100284318074531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331329353961026507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a2ed0b2a4814398969a2a2921d0a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseTrigger: {fileID: 0}
+  timer: 5
+  isFlipped: 0
 --- !u!1 &5331329353961026509
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +950,8 @@ GameObject:
   - component: {fileID: 5331329353960796147}
   - component: {fileID: 5331329353957928925}
   - component: {fileID: 5331329353959025949}
+  - component: {fileID: 1700209000967106358}
+  - component: {fileID: 1597735895524211918}
   m_Layer: 0
   m_Name: Classic_16_Door_R
   m_TagString: Untagged
@@ -989,6 +1021,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1700209000967106358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331329353961026515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14412901, y: 0.55000883, z: 0.44917664}
+  m_Center: {x: 0.024569599, y: 0.7105661, z: -0.03257519}
+--- !u!114 &1597735895524211918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331329353961026515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a2ed0b2a4814398969a2a2921d0a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseTrigger: {fileID: 0}
+  timer: 5
+  isFlipped: 0
 --- !u!1 &5331329353961026517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  demoMode: 0
   healthBar: {fileID: 0}
+  trigger: {fileID: 0}
 --- !u!1 &5331329353961026525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1442,8 @@ GameObject:
   - component: {fileID: 5331329353960796157}
   - component: {fileID: 5331329353957928927}
   - component: {fileID: 5331329353959025951}
+  - component: {fileID: 6326465127213885421}
+  - component: {fileID: 8211747588835678222}
   m_Layer: 0
   m_Name: Classic_16_Door_L
   m_TagString: Untagged
@@ -1449,6 +1513,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6326465127213885421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331329353961026525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a2ed0b2a4814398969a2a2921d0a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseTrigger: {fileID: 0}
+  timer: 5
+  isFlipped: 0
+--- !u!65 &8211747588835678222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331329353961026525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.079842135, y: 0.70393765, z: 0.33576474}
+  m_Center: {x: -0.048068825, y: 0.81793267, z: -0.001183533}
 --- !u!1 &5331329353961026527
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,12 @@ public class Player : MonoBehaviour
     public float currentHealth;
     public bool demoMode;
 
+    public float topSpeed = 100; // km per hour
+    private float currentSpeed = 0;
+    private float scale = 0;
+
+    public AudioSource engineNoise;
+
     public HealthBar healthBar;
     public LoseTrigger trigger;
 
@@ -22,6 +28,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth / 2;
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
+        engineNoise = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +44,12 @@ public class Player : MonoBehaviour
         {
             TakeDamge(1);
         }
+
+        currentSpeed = transform.GetComponent<Rigidbody>().velocity.magnitude * 3.6f;
+        scale = currentSpeed / topSpeed;
+
+        engineNoise.pitch = scale;
+       // engineNoise.volume = scale;
     }
 
     public void TakeDamge(float damage)

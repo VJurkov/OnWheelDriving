@@ -10,6 +10,8 @@ public class LoseTrigger : MonoBehaviour
 
     public void ShowLose()
     {
+        Time.timeScale = 0f;
+        AudioListener.volume = 0f;
         losePanel.SetActive(true);
     } 
 }
