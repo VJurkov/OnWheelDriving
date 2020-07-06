@@ -40,10 +40,7 @@ public class Player : MonoBehaviour
             return;
         }
         // kad pokrenemo igru i svaki put kad udarimo po space na tipkovnici uzet ce 20 kao damage
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamge(1);
-        }
+      
 
         currentSpeed = transform.GetComponent<Rigidbody>().velocity.magnitude * 3.6f;
         scale = currentSpeed / topSpeed;

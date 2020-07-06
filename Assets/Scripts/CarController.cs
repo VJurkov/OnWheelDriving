@@ -13,6 +13,11 @@ public class CarController : MonoBehaviour
     public WheelCollider rearDriverW, rearPassengerW;
     public Transform frontDriverT, frontPassengerT;
     public Transform rearDriverT, rearPassengerT;
+
+    public GameObject leftLight;
+    public GameObject rightLight;
+
+    private bool lightsOn = false;
     // how fast can I turn
     public float maxSteerAngle = 30;
     //how fast can I go
@@ -59,11 +64,31 @@ public class CarController : MonoBehaviour
         _transform.rotation = _quat;
     }
 
+    private void CheckLight()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            lightsOn = !lightsOn;
+
+            if (lightsOn)
+            {
+                leftLight.SetActive(true);
+                rightLight.SetActive(true);
+            }
+            else
+            {
+                leftLight.SetActive(false);
+                rightLight.SetActive(false);
+            }
+        }
+    }
+
     public void FixedUpdate()
     {
         GetInput();
         Steer();
         Accelerate();
         UpdateWheelPoses();
+        CheckLight();
     }
 }

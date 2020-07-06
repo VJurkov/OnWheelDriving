@@ -8,10 +8,15 @@ public class LoseTrigger : MonoBehaviour
 
     public GameObject losePanel;
 
+    public GameObject timer;
+    public GameObject health;
+
     public void ShowLose()
     {
         Time.timeScale = 0f;
         AudioListener.volume = 0f;
         losePanel.SetActive(true);
+        timer.SetActive(false);
+        health.SetActive(false);
     } 
 }

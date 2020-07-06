@@ -16,4 +16,14 @@ public class MainMenu : MonoBehaviour
         //Debug.Log("quit game");
         Application.Quit();
     }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void SetFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
 }

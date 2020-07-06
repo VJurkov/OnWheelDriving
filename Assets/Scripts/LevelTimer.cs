@@ -29,7 +29,7 @@ public class LevelTimer : MonoBehaviour
         }
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
-        player.TakeDamge(0.05f * Time.deltaTime);
+        player.TakeDamge(0.1f * Time.deltaTime);
         if (currentTime < 5)
         {
             countdownText.color = Color.red;

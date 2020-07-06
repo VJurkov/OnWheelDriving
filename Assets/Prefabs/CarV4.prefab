@@ -1412,6 +1412,8 @@ MonoBehaviour:
   frontPassengerT: {fileID: 5331329354412623525}
   rearDriverT: {fileID: 5331329355487455190}
   rearPassengerT: {fileID: 5331329355644747771}
+  leftLight: {fileID: 5331329355204295532}
+  rightLight: {fileID: 5331329354990591834}
   maxSteerAngle: 20
   motorForce: 800
 --- !u!114 &5331329353961026524
@@ -1429,6 +1431,8 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   demoMode: 0
+  topSpeed: 100
+  engineNoise: {fileID: 0}
   healthBar: {fileID: 0}
   trigger: {fileID: 0}
 --- !u!1 &5331329353961026525
@@ -2480,7 +2484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5331329354990591833
 Transform:
   m_ObjectHideFlags: 0
@@ -2507,7 +2511,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.65882355, g: 0.84705883, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 5
   m_Range: 100
   m_SpotAngle: 45
   m_InnerSpotAngle: 1
@@ -2572,7 +2576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5331329355204295539
 Transform:
   m_ObjectHideFlags: 0
@@ -2599,7 +2603,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.6556604, g: 0.8436066, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 5
   m_Range: 100
   m_SpotAngle: 45
   m_InnerSpotAngle: 19
@@ -2638,7 +2642,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
